@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'RockwellBold';
+  src: url('/assets/fonts/Rockwell-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes scrollSlow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scrollSlow {
+  animation: scrollSlow 18s linear infinite;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-track {
+  display: flex;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+.scrollbar-hide {
+  /* For IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* For Chrome, Safari, and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
